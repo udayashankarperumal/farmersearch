@@ -4,11 +4,13 @@ import './FarmerSearchDropdown.css';
 const FarmerSearchDropdown = (props) => {
     const handleChange = event => {
         console.log(event.target.value)
-        let filteredData = props.data.filter(value => {
-            return (
-                value.state.toLowerCase().includes(event.target.value.toLowerCase())
-            );
-        });
+        let filteredData = props.data;
+        if (event.target.value !== 'State')
+            filteredData = props.data.filter(value => {
+                return (
+                    value.state.toLowerCase().includes(event.target.value.toLowerCase())
+                );
+            });
         props.handleSetData(filteredData);
     }
     return (
