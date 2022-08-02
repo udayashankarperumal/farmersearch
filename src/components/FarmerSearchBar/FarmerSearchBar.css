@@ -1,0 +1,35 @@
+input,
+select {
+    outline: 0;
+    border: 0;
+
+}
+
+.inputField input {
+    width: 100%;
+    height: 32px;
+    padding: 7px 10px 7px 10px;
+    color: #707070;
+    background: #FFFFFF;
+    border: 1px solid #8D9599;
+}
+
+.inputField {
+    position: relative;
+    z-index: 2;
+}
+
+.inputField.search {
+    width: 240px;
+}
+
+.inputField.search::after {
+    content: '';
+    background: transparent url('./images/search-icon.png') no-repeat right center;
+    position: absolute;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    top: 7px;
+    pointer-events: none;
+}

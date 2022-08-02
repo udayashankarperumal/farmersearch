@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+.global_filter {
+  margin-bottom: 23px;
+  display: flex;
+}
+
+.global_filter>div {
+  position: relative;
+  padding: 0 16px;
+}
+
+.global_filter>div:first-child {
+  padding-left: 0;
+}
+
+.global_filter>div::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 32px;
+  border-right: 1px solid #DADCDE;
+}
